@@ -85,11 +85,14 @@ def get_interval_deschis(lst, start, stop):
     return lista
 
 
-#def test_get_parte_intreaga():
-    #assert get_parte_intreaga([1.5, -3.3, 8, 9.8, 3.2]) == [1, -3, 8, 9, 3]
-    #assert get_parte_intreaga([]) == []
-    #assert get_parte_intreaga([2.3, 4,19, 20.4]) == [2, 4, 20]
+def test_get_parte_intreaga():
+    assert get_parte_intreaga([1.5, -3.3, 8, 9.8, 3.2]) == [1, -3, 8, 9, 3]
+    assert get_parte_intreaga([]) == []
+    assert get_parte_intreaga([2.3, 4,19, 20.4]) == [2, 4, 20]
 
+def show_cuvant_cheie(lst):
+    result= get_transformare(lst)
+    print(f'Dati lista:{result}')
 
 
 def main():
@@ -103,13 +106,15 @@ def main():
             show_parte_intreaga(lst)
         elif optiune == '3':
             show_interval_deschis(lst, start, stop)
+        elif optiune == '5':
+            #show_cuvant_cheie(lst)
         elif optiune == 'x':
             break
         else:
             print('Optiune invalida, reincercati!')
 
 if __name__=='__main__':
-    #test_get_parte_intreaga()
+    test_get_parte_intreaga()
     main()
 
 
